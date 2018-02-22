@@ -3,7 +3,7 @@
 
 <ul>
   <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.cocktail.name %> was <%= dose.description%></li>
+    <li> <%= dose.description%> of <%= dose.ingredient.name %></li>
       <%= link_to dose_path(dose), class: 'btn btn-danger btn-sm', method: :delete do %>
       <p>Delete</p>
     <% end %>
