@@ -1,6 +1,6 @@
-
-
-<h1>The cocktails:</h1>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path "summer_dribbble2.gif"%>)";>
+  <h1>The cocktail paradise</h1>
+</div>
   <% @cocktails.each do |cocktail| %>
   <p><%= cocktail.name %></p>
   <td><%= link_to 'Show', cocktail_path(cocktail) %></td>
