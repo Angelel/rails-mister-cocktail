@@ -9,9 +9,11 @@ Rails.application.routes.draw do
 #               PATCH  /cocktails/:id(.:format)      cocktails#update
 #               PUT    /cocktails/:id(.:format)      cocktails#update
 #               DELETE /cocktails/:id(.:format)      cocktails#destroy
-resources :cocktails do
-
-  resources :doses, only: [:new, :create, :show, :destroy]
+  resources :cocktails do
+    resources :doses, only: [:new, :create, :show, :destroy]
   end
   resources :doses, only: [:destroy]
+
+  root to: "cocktails#index"
+
 end

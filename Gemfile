@@ -8,8 +8,8 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass' # Bootstrap v3
 gem 'font-awesome-sass'
-
-
+gem 'figaro'
+ruby '2.4.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use postgresql as the database for Active Record
