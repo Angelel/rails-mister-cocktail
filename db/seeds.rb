@@ -10,3 +10,16 @@ require 'faker'
 50.times do
   Ingredient.create(name: Faker::Dessert.topping)
 end
+
+
+require 'json'
+require 'open-uri'
+
+url = 'http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+data = open(url).read
+result = JSON.parse(data)
+
+result["drinks"].each do |ingredient|
+  Ingredient.create(name: ingredient.values[0])
+end
+
